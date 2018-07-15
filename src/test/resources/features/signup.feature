@@ -1,4 +1,4 @@
-@signup @web
+@signup @web @regression
 Feature:  Sign up
 
   Background:

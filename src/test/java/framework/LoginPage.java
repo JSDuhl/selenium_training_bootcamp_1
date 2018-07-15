@@ -2,6 +2,9 @@ package framework;
 
 import org.openqa.selenium.By;
 
+//jill duhl, july 2018
+//https://floating-anchorage-58495.herokuapp.com/
+
 public class LoginPage extends BasePage {
 
     private By emailTextField=By.xpath("//input[@id='email']");

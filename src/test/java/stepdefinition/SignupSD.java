@@ -8,11 +8,9 @@ import framework.HomePage;
 import framework.SignupPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-
-
-import java.util.Random;
-
 import static stepdefinition.SharedSD.getDriver;
+
+//jill duhl July 2018
 
 public class SignupSD {
 
@@ -29,7 +27,6 @@ public class SignupSD {
     }
 
     @When("^I enter name as (testuser), email as (email), password as (tester)$")
-
     public void enterDataIntoTextFields(String name, String email, String password) {
                 signupPage.enterUserName(name);
                 signupPage.enterRandomEmail(email);
@@ -38,7 +35,6 @@ public class SignupSD {
         }
 
     @And ("^I click on the submit button$")
-
     public void submitRegistration(){
                 signupPage.clickOnSubmitButton();
     }
@@ -47,12 +43,10 @@ public class SignupSD {
     @Then("^I am signed-in as a new user$")
 
     public void verifySignin(){
-        //String URL = getDriver().getCurrentUrl();
-        //Assert.assertEquals(URL, "https://floating-anchorage-58495.herokuapp.com" );
         getDriver().findElement(By.xpath("//a[@role='button']//img[@class='img-circle']")).isDisplayed();
 
+        }
 
-    }
 
     }
 

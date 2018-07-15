@@ -1,15 +1,14 @@
 package stepdefinition;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import framework.HomePage;
 import framework.SignupPage;
 import org.testng.Assert;
-
-
 import static stepdefinition.SharedSD.getDriver;
+
+//jill duhl  July 2018
 
 public class InvalidRegSD {
 

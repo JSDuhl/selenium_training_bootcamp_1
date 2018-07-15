@@ -19,6 +19,10 @@ public class AutoSearchSD {
 
     }
 
+
+    //search on top left of site is autocomplete search
+    // search for term "ios" and see the 1 response "Title: I will teach you IOS"
+
     @When("^I search on top search bar with text ios$")
     public void enterSearchText(){
 
@@ -28,8 +32,15 @@ public class AutoSearchSD {
     @Then("^I verify Title: I will teach you IOS as displayed result$")
     public void verifySearchResult(){
         getDriver().findElement(By.linkText("Title: I will teach you IOS")).isDisplayed();
+        System.out.println("Search for ios Shows correct result");
 
     }
+
+
+
+
+
+
 
 
     }

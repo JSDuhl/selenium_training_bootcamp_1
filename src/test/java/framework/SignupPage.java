@@ -3,6 +3,9 @@ package framework;
 import org.openqa.selenium.By;
 import java.util.Random;
 
+//jill duhl July 2018
+//https://floating-anchorage-58495.herokuapp.com/
+
 public class SignupPage extends BasePage {
 
     private By usernameTextField = By.name("username");
@@ -31,6 +34,10 @@ public class SignupPage extends BasePage {
     public String getSignupText() {
         return getTextFromElement(signupText);
     }
+
+
+
+    //to generate random emails for the signup test
 
     public void enterRandomEmail(String email) {
         Random randomGenerator = new Random();

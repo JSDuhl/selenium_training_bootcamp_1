@@ -12,9 +12,12 @@ Feature: Invalid Registration
 
 
     Examples:
-    | email              |
-    | test.com           |
-    | test@test@test.com |
+    | email                  |
+    | test.com               |
+    | @gmail.com             |
+    | test2gmail.com         |
+    | tester @yahoo.com      |
+    | test123/july@gmail.com |
 
 
 

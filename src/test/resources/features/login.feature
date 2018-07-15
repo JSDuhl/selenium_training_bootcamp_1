@@ -1,4 +1,4 @@
-  @login @web
+  @login @web @regression
   Feature: Login feature
 
   Background:

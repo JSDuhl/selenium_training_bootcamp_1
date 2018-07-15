@@ -9,8 +9,9 @@ import framework.HomePage;
 import framework.LoginPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-
 import static stepdefinition.SharedSD.getDriver;
+
+//jill duhl  July 2018
 
 public class LoginSD extends BasePage {
 
@@ -22,7 +23,6 @@ public class LoginSD extends BasePage {
 
         homePage.clickOnSignIn();
         Assert.assertEquals(loginPage.getEmailTitle(), "EMAIL ADDRESS:");
-
     }
 
 
@@ -31,15 +31,12 @@ public class LoginSD extends BasePage {
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
 
-
     }
 
     @And("^I click on (submit) button$")
     public void submitLogin(String button){
         loginPage.clickOnLoginButton();
     }
-
-
 
 
 
