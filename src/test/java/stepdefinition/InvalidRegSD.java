@@ -3,8 +3,8 @@ package stepdefinition;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import framework.HomePage;
-import framework.SignupPage;
+import framework.web_pages.HomePage;
+import framework.web_pages.SignupPage;
 import org.testng.Assert;
 import static stepdefinition.SharedSD.getDriver;
 

@@ -3,7 +3,7 @@ package stepdefinition;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import framework.HomePage;
+import framework.web_pages.HomePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -15,7 +15,7 @@ public class AutoSearchSD {
 
     @Given("^i am on the home page$")
     public void iAmOnHomePage() {
-       Assert.assertEquals(getDriver().getTitle(), "Threely Starter Template", "Invalid Home Page");
+        Assert.assertEquals(getDriver().getTitle(), "Threely Starter Template", "Invalid Home Page");
 
     }
 
@@ -23,26 +23,25 @@ public class AutoSearchSD {
     //search on top left of site is autocomplete search
     // search for term "ios" and see the 1 response "Title: I will teach you IOS"
 
-    @When("^I search on top search bar with text ios$")
-    public void enterSearchText(){
+    @When("^I search on top search bar with text (.+)$")
+    public void enterSearchText(String title) {
 
-           homePage.enterAutoSearchTerm("ios");
-        }
 
-    @Then("^I verify Title: I will teach you IOS as displayed result$")
-    public void verifySearchResult(){
-        getDriver().findElement(By.linkText("Title: I will teach you IOS")).isDisplayed();
-        System.out.println("Search for ios Shows correct result");
+        homePage.enterAutoSearchTerm(title);
+    }
+
+    @Then("^I verify (.+) as displayed result$")
+    public void verifySearchResult(String response) {
+
+        getDriver().findElement(By.linkText(response)).isDisplayed();
+
+        Assert.assertEquals(response,"Title i will teach you IOS");
 
     }
 
+}
 
 
 
-
-
-
-
-    }
 
 

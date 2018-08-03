@@ -7,3 +7,4 @@ Feature:  Search
   Scenario: Verify Search Autocomplete
     When I search on top search bar with text ios
     Then I verify Title: I will teach you IOS as displayed result
+

@@ -2,7 +2,7 @@ package stepdefinition;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import framework.HomePage;
+import framework.web_pages.HomePage;
 import org.testng.Assert;
 import static stepdefinition.SharedSD.getDriver;
 

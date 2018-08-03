@@ -1,5 +1,6 @@
-package framework;
+package framework.web_pages;
 
+import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ public class HomePage extends BasePage {
 
     private By signInLink = By.xpath("//a[contains(text(),'Sign In')]");
     private By joinButton = By.xpath("//a[@class='btn btn-success']");
+    private By iconImage = By.xpath("//a[@role='button']//img[@class='img-circle']");
+    private By logoutLink=By.xpath("//a[contains(text(),'Logout')]");
     private By autoSearch = By.xpath("//input[@id='aa-search-input']");
     private By gigTitle = By.xpath("//h4/.");
     private By priceTag = By.xpath("//h3/.");
@@ -33,6 +36,13 @@ public class HomePage extends BasePage {
     public void enterAutoSearchTerm(String enterSearch) {
         sendText(autoSearch, enterSearch);
     }
+
+    public void findLogoutLink() {
+        getDriver().findElement(iconImage).isDisplayed();
+        clickOn(iconImage);
+        getDriver().findElement(logoutLink).isDisplayed();
+    }
+
 
 
     //for verifying counts of web elements on the home page.
@@ -82,6 +92,7 @@ public class HomePage extends BasePage {
         }
             return imageList.size();
     }
+
 
 
 }

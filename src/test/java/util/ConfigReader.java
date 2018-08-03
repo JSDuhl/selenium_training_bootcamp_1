@@ -1,5 +1,7 @@
 package util;
 
+import ru.yandex.qatools.allure.annotations.Attachment;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -58,6 +60,10 @@ public class ConfigReader {
     }
 
 
+    @Attachment(value="Page failed screenshot", type="image/png")
+    public byte[] saveScreenshot(byte[] screenShot){
+        return screenShot;
+    }
 
 
 

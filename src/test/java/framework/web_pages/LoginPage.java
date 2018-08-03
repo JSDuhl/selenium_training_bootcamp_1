@@ -1,5 +1,6 @@
-package framework;
+package framework.web_pages;
 
+import framework.BasePage;
 import org.openqa.selenium.By;
 
 //jill duhl, july 2018

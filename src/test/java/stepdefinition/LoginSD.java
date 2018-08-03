@@ -4,16 +4,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import framework.BasePage;
-import framework.HomePage;
-import framework.LoginPage;
-import org.openqa.selenium.By;
+import framework.web_pages.HomePage;
+import framework.web_pages.LoginPage;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
-import static stepdefinition.SharedSD.getDriver;
 
 //jill duhl  July 2018
 
-public class LoginSD extends BasePage {
+public class LoginSD {
 
     private LoginPage loginPage = new LoginPage();
     private HomePage homePage = new HomePage();
@@ -41,11 +39,17 @@ public class LoginSD extends BasePage {
 
 
     @Then("^I verify user icon is displayed$")
-    public void verifyUserIcon(){
-       getDriver().findElement(By.xpath("//a[@role='button']//img[@class='img-circle']")).isDisplayed();
+    public void verifySignIn(){
 
-
-    }
+            try {
+                homePage.findLogoutLink();
+                System.out.println("user is logged in");
+            } catch(NoSuchElementException a){
+                System.out.println("User is not logged in");
+            }
+        }
 
 
 }
+
+

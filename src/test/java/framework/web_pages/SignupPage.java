@@ -1,7 +1,10 @@
-package framework;
+package framework.web_pages;
 
+import framework.BasePage;
 import org.openqa.selenium.By;
 import java.util.Random;
+
+import static stepdefinition.SharedSD.getDriver;
 
 //jill duhl July 2018
 //https://floating-anchorage-58495.herokuapp.com/
@@ -36,16 +39,15 @@ public class SignupPage extends BasePage {
     }
 
 
-
     //to generate random emails for the signup test
 
-    public void enterRandomEmail(String email) {
-        Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(1000);
-        sendText(emailAddressTextField,("username" + randomInt + "@gmail.com"));
+    public void enterRandomGmail(String email) { enterRandomEmail(emailAddressTextField);
     }
 
-
 }
+
+
+
+
 
 

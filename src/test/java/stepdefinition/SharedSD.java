@@ -4,6 +4,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.yandex.qatools.allure.annotations.Attachment;
 import util.ConfigReader;
 import java.util.concurrent.TimeUnit;
 
@@ -11,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 public class SharedSD {
 
 	private static WebDriver driver = null;
+
+
 	@Before("@web")
 	public static void before() {
 
@@ -23,6 +26,7 @@ public class SharedSD {
 		driver.get(configReader.getUrl());
 
 	}
+
 
 
 
